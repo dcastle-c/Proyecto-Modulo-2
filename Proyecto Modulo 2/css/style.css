@@ -1,0 +1,41 @@
+/* Paleta de Colores "The Castle Wallet" */
+:root {
+    --castle-green: #2d5a27;      
+    --earth-brown: #5d4037;       
+    --stone-grey: #d7ccc8;      
+    --gold-accent: #c5a022;       
+    --background-cream: #f5f5f0;  
+}
+
+body {
+    background-color: var(--background-cream);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: var(--earth-brown);
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    border-left: 5px solid var(--castle-green); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Botones con el verde principal */
+.btn-primary {
+    background-color: var(--castle-green) !important;
+    border-color: var(--castle-green) !important;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #1e3d1a !important; 
+}
+
+h1, h2, h3 {
+    color: var(--castle-green);
+    font-weight: 700;
+}
