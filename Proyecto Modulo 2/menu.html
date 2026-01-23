@@ -1,0 +1,95 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - El Panel del Castillo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: var(--castle-green);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">The Castle Wallet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transactions.html">Historial</a></li>
+                    <li class="nav-item"><a class="nav-link text-light opacity-75" href="login.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <header class="mb-5 border-bottom pb-3">
+            <h2 class="fw-bold">Resumen de Cuenta</h2>
+            <p class="text-muted">Estado actual de sus activos en The Castle Wallet</p>
+        </header>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card h-100 p-4 shadow-sm border-0 bg-white">
+                    <div class="card-body">
+                        <h6 class="text-uppercase text-muted fw-bold mb-3">Fondos Disponibles</h6>
+                        <h1 class="display-3 fw-bold mb-2">$ 1.250.000</h1>
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-success rounded-pill px-3 me-2">Reserva Asegurada</span>
+                            <small class="text-muted">Actualizado hace un momento</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card h-100 p-4 shadow-sm border-0 bg-white">
+                    <h5 class="fw-bold mb-4">Operaciones</h5>
+                    <div class="d-grid gap-3">
+                        <a href="deposit.html" class="btn btn-primary py-3 fw-bold">
+                            Ingresar Fondos
+                        </a>
+                        <a href="sendmoney.html" class="btn btn-primary py-3 fw-bold">
+                            Enviar Activos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold">Movimientos Recientes</h4>
+                <a href="transactions.html" class="text-decoration-none fw-bold" style="color: var(--castle-green);">Ver historial completo</a>
+            </div>
+            <div class="card shadow-sm border-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="ps-4">Descripción</th>
+                                <th>Fecha</th>
+                                <th class="text-end pe-4">Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 fw-bold">Depósito Inicial</td>
+                                <td>21 Ene 2026</td>
+                                <td class="text-end pe-4 text-success fw-bold">+$ 500.000</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Transferencia Enviada</td>
+                                <td>20 Ene 2026</td>
+                                <td class="text-end pe-4 text-danger fw-bold">-$ 45.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
