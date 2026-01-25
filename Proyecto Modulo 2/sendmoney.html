@@ -29,12 +29,14 @@
 
                         <form id="transferForm">
                             <div class="mb-4">
-                                <label for="contact" class="form-label fw-bold">Seleccionar Destinatario</label>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <label for="contact" class="form-label fw-bold mb-0">Seleccionar Destinatario</label>
+                                    <button type="button" class="btn btn-sm btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#modalContacto">
+                                        + Nuevo Contacto
+                                    </button>
+                                </div>
                                 <select class="form-select form-select-lg" id="contact" required>
                                     <option value="" selected disabled>Seleccione un contacto del reino</option>
-                                    <option value="1">Arturo Pendragón (Cuenta: 998877)</option>
-                                    <option value="2">Ginebra de Camelot (Cuenta: 554433)</option>
-                                    <option value="3">Merlín el Sabio (Cuenta: 112233)</option>
                                 </select>
                             </div>
 
@@ -45,7 +47,7 @@
                                     <input type="number" class="form-control border-0 shadow-none" id="sendAmount" placeholder="0.00" required>
                                 </div>
                                 <div class="form-text text-end mt-2">
-                                    Saldo disponible: <span class="fw-bold text-dark">$ 1.250.000</span>
+                                    Saldo disponible: <span class="fw-bold text-dark" id="saldoDisponibleText">$ 0</span>
                                 </div>
                             </div>
 
@@ -64,6 +66,32 @@
             </div>
         </div>
     </main>
+
+    <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modalContactoLabel">Agregar Nuevo Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addContactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Ej: Lancelot du Lac" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="accountNumber" class="form-label fw-bold">Número de Cuenta</label>
+                            <input type="text" class="form-control" id="accountNumber" placeholder="Ej: 112233" required>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary">Guardar Contacto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
