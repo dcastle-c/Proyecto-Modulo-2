@@ -2,11 +2,23 @@ $(document).ready(function() {
     let saldoActual = localStorage.getItem('saldoCastle') 
         ? parseFloat(localStorage.getItem('saldoCastle')) 
         : 1250000;
+     let transacciones = JSON.parse(localStorage.getItem('transaccionesCastle')) || [];
 
     function actualizarSaldo(nuevoMonto) {
         localStorage.setItem('saldoCastle', nuevoMonto);
         saldoActual = nuevoMonto;
     }
+    function registrarTransaccion(tipo, monto) {
+        const nuevaTransa = {
+            desc: tipo,
+            fecha: new Date().toLocaleDateString('es-CL'),
+            monto: monto,
+            tipo: monto > 0 ? 'deposito' : 'transferencia'
+        };
+        transacciones.unshift(nuevaTransa);
+        localStorage.setItem('transaccionesCastle', JSON.stringify(transacciones.slice(0, 10)));
+    }
+
 
     if ($('#saldoDisplay').length > 0) {
         $('#saldoDisplay').text('$' + saldoActual.toLocaleString('es-CL'));
