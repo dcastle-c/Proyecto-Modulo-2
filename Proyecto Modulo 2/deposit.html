@@ -40,6 +40,16 @@
                                 </div>
                             </div>
                             <div class="mb-4">
+                            <label for="amount" class="form-label fw-bold">Monto a Ingresar</label>
+                            <div class="input-group input-group-lg border rounded">
+                                <span class="input-group-text border-0 bg-white">$</span>
+                                <input type="number" class="form-control border-0 shadow-none" id="amount" placeholder="0.00" required min="1">
+                            </div>
+                            <div class="form-text text-end mt-2">
+                                Saldo actual: <span class="fw-bold text-dark" id="saldoDisponibleText">$ 0</span>
+                            </div>
+                        </div>
+                            <div class="mb-4">
                                 <label for="origin" class="form-label fw-bold">Cuenta de Origen</label>
                                 <select class="form-select" id="origin" required>
                                     <option value="" selected disabled>Seleccione una opción</option>
