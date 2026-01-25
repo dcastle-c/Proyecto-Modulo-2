@@ -11,6 +11,12 @@ $(document).ready(function() {
         { nombre: "Merlín el Sabio", cuenta: "112233" }
     ];
 
+    function mostrarExito(mensaje) {
+        $('#mensajeExito').text(mensaje);
+        const modal = new bootstrap.Modal(document.getElementById('modalExito'));
+        modal.show();
+    }
+
     function actualizarSaldo(nuevoMonto) {
         localStorage.setItem('saldoCastle', nuevoMonto);
         saldoActual = nuevoMonto;
@@ -78,8 +84,7 @@ $(document).ready(function() {
         if (monto > 0) {
             actualizarSaldo(saldoActual + monto);
             registrarTransaccion("Depósito de Fondos", monto);
-            alert("¡Ingreso exitoso!");
-            window.location.href = 'menu.html'; 
+            mostrarExito("El depósito se ha procesado correctamente en tu bóveda.");
         }
     });
 
@@ -102,10 +107,7 @@ $(document).ready(function() {
         if (montoEnviado > 0 && montoEnviado <= saldoActual) {
             actualizarSaldo(saldoActual - montoEnviado);
             registrarTransaccion("Envío a " + contacto, -montoEnviado);
-            alert("Transferencia exitosa.");
-            window.location.href = 'menu.html';
-        } else {
-            alert("Monto inválido o fondos insuficientes.");
+            mostrarExito("Transferencia enviada con éxito a " + contacto);
         }
     });
 
@@ -120,9 +122,9 @@ $(document).ready(function() {
         cargarContactos();
         this.reset();
         
-        const modal = bootstrap.Modal.getInstance(document.getElementById('modalContacto'));
-        modal.hide();
-        alert("Contacto agendado con éxito.");
+        const modalC = bootstrap.Modal.getInstance(document.getElementById('modalContacto'));
+        modalC.hide();
+        mostrarExito("El nuevo contacto ha sido agendado en el reino.");
     });
 
     $(document).on('click', '.filter-btn', function() {
