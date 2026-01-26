@@ -1,4 +1,3 @@
-/* Paleta de Colores "The Castle Wallet" */
 :root {
     --castle-green: #2d5a27;      
     --earth-brown: #5d4037;       
@@ -11,8 +10,84 @@ body {
     background-color: var(--background-cream);
     font-family: 'Segoe UI', Roboto, sans-serif;
     color: var(--earth-brown);
+    margin: 0;
 }
 
+.hero-section {
+    background: linear-gradient(135deg, var(--castle-green), #1e3d1a);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-bottom: 6px solid var(--gold-accent);
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 4.5rem;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+
+.feature-icon {
+    font-size: 2.8rem;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.btn-castle {
+    background-color: var(--gold-accent) !important;
+    color: white !important;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-castle:hover {
+    background-color: white !important;
+    color: var(--castle-green) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--castle-green);
+}
 
 .card {
     background-color: white;
@@ -22,7 +97,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Botones con el verde principal */
 .btn-primary {
     background-color: var(--castle-green) !important;
     border-color: var(--castle-green) !important;
@@ -38,4 +112,13 @@ body {
 h1, h2, h3 {
     color: var(--castle-green);
     font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section {
+        padding: 40px 0;
+    }
 }

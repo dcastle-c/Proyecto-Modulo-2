@@ -1,67 +1,91 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Módulo 2 - Billetera Digital</title>
+    <title>The Castle Wallet - Bienvenida</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --castle-green: #2d5a27;
+            --castle-green-light: #4a8c42;
+            --castle-gold: #d4af37;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--castle-green), var(--castle-green-light));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            border-bottom: 5px solid var(--castle-gold);
+        }
+        .btn-castle {
+            background-color: var(--castle-gold);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-castle:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+            color: var(--castle-green);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--castle-gold);
+            margin-bottom: 1rem;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>The Castle Wallet</h1>
-        <p class="lead"> La billetera segura como fortaleza</p>
-    </header>
-    <main class="container my-5">
-        <section class="row text-center">
-            <div class="col-md-12">
-                <h2>Comienza a gestionar tu dinero</h2>
-                <p>Inicia sesión para realizar transferencias, depósitos y revisar tu historial.</p>
-                
-                <div class="mt-4">
-                    <a href="login.html" class="btn btn-primary btn-lg">Iniciar Sesión</a>
-                </div>
-            </div>
-        </section>
 
-        <hr class="my-5">
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="mb-4">
+                        <i class="bi bi-fortress" style="font-size: 5rem; color: var(--castle-gold);"></i>
+                    </div>
+                    <h1 class="display-2 fw-bold mb-3">The Castle Wallet</h1>
+                    <p class="lead mb-5 opacity-75">La billetera digital diseñada para proteger tus activos con la seguridad de una fortaleza real.</p>
+                    
+                    <div class="glass-card mb-5">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <i class="bi bi-shield-check feature-icon"></i>
+                                <h5 class="fw-bold">Segura</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="bi bi-lightning-charge feature-icon"></i>
+                                <h5 class="fw-bold">Rápida</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="bi bi-coin feature-icon"></i>
+                                <h5 class="fw-bold">Eficiente</h5>
+                            </div>
+                        </div>
+                    </div>
 
-        <section class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Depósitos</h5>
-                        <p class="card-text">Agrega fondos a tu cuenta de manera segura.</p>
-                        <a href="deposit.html" class="btn btn-outline-secondary">Ir a Depósitos</a>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a href="login.html" class="btn btn-castle btn-lg shadow">Iniciar Sesión</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">Crear Cuenta</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Transferencias</h5>
-                        <p class="card-text">Envía dinero a tus contactos agendados.</p>
-                        <a href="sendmoney.html" class="btn btn-outline-secondary">Enviar Dinero</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Movimientos</h5>
-                        <p class="card-text">Revisa tu historial completo de transacciones.</p>
-                        <a href="transactions.html" class="btn btn-outline-secondary">Ver Historial</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-light text-center py-4 border-top">
-        <p>&copy; 2026 David Castillo</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
