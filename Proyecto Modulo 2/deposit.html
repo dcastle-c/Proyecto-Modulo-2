@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Castle Wallet - Ingresar Fondos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
@@ -26,29 +27,24 @@
                             <h3 class="fw-bold">Ingresar Activos</h3>
                             <p class="text-muted">Aumente la reserva de su cuenta</p>
                         </header>
+                        
                         <form id="depositForm">
                             <div class="mb-4 text-center">
-                                <label class="form-label text-muted small text-uppercase fw-bold">Saldo Actual</label>
-                                <h2 class="fw-bold text-dark">$ 1.250.000</h2>
+                                <label class="form-label text-muted small text-uppercase fw-bold">Resumen de Bóveda</label>
+                                <h2 class="fw-bold text-dark" id="saldoDisplay">$ 0</h2>
                             </div>
 
-                            <div class="mb-3">
+                            <div class="mb-4">
                                 <label for="amount" class="form-label fw-bold">Monto a Ingresar</label>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-text bg-light">$</span>
-                                    <input type="number" class="form-control" id="amount" placeholder="0.00" required min="1">
+                                <div class="input-group input-group-lg border rounded">
+                                    <span class="input-group-text border-0 bg-white">$</span>
+                                    <input type="number" class="form-control border-0 shadow-none" id="amount" placeholder="0.00" required min="1">
+                                </div>
+                                <div class="form-text text-end mt-2">
+                                    Disponible para operar: <span class="fw-bold text-dark" id="saldoDisponibleText">$ 0</span>
                                 </div>
                             </div>
-                            <div class="mb-4">
-                            <label for="amount" class="form-label fw-bold">Monto a Ingresar</label>
-                            <div class="input-group input-group-lg border rounded">
-                                <span class="input-group-text border-0 bg-white">$</span>
-                                <input type="number" class="form-control border-0 shadow-none" id="amount" placeholder="0.00" required min="1">
-                            </div>
-                            <div class="form-text text-end mt-2">
-                                Saldo actual: <span class="fw-bold text-dark" id="saldoDisponibleText">$ 0</span>
-                            </div>
-                        </div>
+
                             <div class="mb-4">
                                 <label for="origin" class="form-label fw-bold">Cuenta de Origen</label>
                                 <select class="form-select" id="origin" required>
@@ -57,6 +53,7 @@
                                     <option value="card">Tarjeta de Crédito Vinculada</option>
                                 </select>
                             </div>
+
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary btn-lg fw-bold">Confirmar Ingreso</button>
                                 <a href="menu.html" class="btn btn-outline-secondary">Cancelar</a>
@@ -67,27 +64,28 @@
             </div>
         </div>
     </main>
+
     <div class="modal fade" id="modalExito" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center p-4 border-0 shadow">
-            <div class="modal-body">
-                <div class="mb-3">
-                    <div class="display-1 text-success">
-                        <i class="bi bi-check-circle-fill">✔</i>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 border-0 shadow">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="display-1 text-success">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
                     </div>
+                    <h4 class="fw-bold" id="tituloExito">¡Operación Exitosa!</h4>
+                    <p id="mensajeExito" class="text-muted"></p>
+                    <button type="button" class="btn btn-primary w-100 py-2 fw-bold" data-bs-dismiss="modal" onclick="window.location.href='menu.html'">
+                        Continuar
+                    </button>
                 </div>
-                <h4 class="fw-bold" id="tituloExito">¡Operación Exitosa!</h4>
-                <p id="mensajeExito" class="text-muted"></p>
-                <button type="button" class="btn btn-primary w-100 py-2 fw-bold" data-bs-dismiss="modal" onclick="window.location.href='menu.html'">
-                    Continuar
-                </button>
             </div>
         </div>
     </div>
-</div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
