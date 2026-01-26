@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Castle Wallet - Historial de Movimientos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
@@ -18,30 +19,20 @@
     </nav>
 
     <main class="container py-5">
-        <header class="d-flex justify-content-between align-items-end mb-4 border-bottom pb-3">
-            <div>
-                <h2 class="fw-bold">Historial de Movimientos</h2>
-                <p class="text-muted mb-0">Registro detallado de ingresos y transferencias</p>
-            </div><div class="mb-4 d-flex gap-2">
-            <button class="btn btn-sm btn-outline-primary filter-btn active" data-filter="todos">Todos</button>
-            <button class="btn btn-sm btn-outline-success filter-btn" data-filter="deposito">Solo Ingresos</button>
-            <button class="btn btn-sm btn-outline-danger filter-btn" data-filter="transferencia">Solo Egresos</button>
+        <header class="mb-4 border-bottom pb-3">
+            <h2 class="fw-bold">Historial de Movimientos</h2>
+            <p class="text-muted mb-3">Registro detallado de ingresos y transferencias</p>
+            
+            <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-primary filter-btn active" data-filter="todos">Todos</button>
+                <button class="btn btn-sm btn-outline-success filter-btn" data-filter="deposito">Solo Ingresos</button>
+                <button class="btn btn-sm btn-outline-danger filter-btn" data-filter="transferencia">Solo Egresos</button>
             </div>
-
-            <button class="btn btn-outline-secondary btn-sm">Descargar Reporte</button>
         </header>
-
-        <div class="mb-4">
-            <div class="nav nav-pills" id="v-pills-tab" role="tablist">
-                <button class="nav-link active me-2" data-bs-toggle="pill">Todos</button>
-                <button class="nav-link me-2" data-bs-toggle="pill">Ingresos</button>
-                <button class="nav-link" data-bs-toggle="pill">Egresos</button>
-            </div>
-        </div>
 
         <div class="card shadow-sm border-0 bg-white">
             <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
+                <table class="table table-hover align-middle mb-0" id="tablaMovimientos">
                     <thead class="table-light">
                         <tr>
                             <th class="ps-4">ID</th>
@@ -59,20 +50,6 @@
                             <td><span class="badge bg-success-subtle text-success border border-success-subtle">Completado</span></td>
                             <td class="text-end pe-4 text-success fw-bold">+$ 500.000</td>
                         </tr>
-                        <tr>
-                            <td class="ps-4 text-muted small">#TCW-983</td>
-                            <td>20 Ene 2026</td>
-                            <td class="fw-bold">Envío a Arturo Pendragón</td>
-                            <td><span class="badge bg-success-subtle text-success border border-success-subtle">Completado</span></td>
-                            <td class="text-end pe-4 text-danger fw-bold">-$ 45.000</td>
-                        </tr>
-                        <tr>
-                            <td class="ps-4 text-muted small">#TCW-982</td>
-                            <td>19 Ene 2026</td>
-                            <td class="fw-bold">Pago de Suministros</td>
-                            <td><span class="badge bg-warning-subtle text-warning border border-warning-subtle">Pendiente</span></td>
-                            <td class="text-end pe-4 text-danger fw-bold">-$ 120.000</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -80,7 +57,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
