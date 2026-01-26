@@ -14,7 +14,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, var(--castle-green), #1e3d1a);
+    background: radial-gradient(circle, var(--castle-green-light) 0%, var(--castle-green) 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
